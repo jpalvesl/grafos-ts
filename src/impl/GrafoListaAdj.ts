@@ -4,9 +4,11 @@ class GrafoListaAdj implements Grafo {
   vertices = [] as string[];
   arestas = new Set<string>;
   
-  constructor(vertices: string[], arestas: Set<string>) {
-    this.vertices = vertices;
-    this.arestas = arestas;
+  constructor(vertices?: string[], arestas?: string[]) {
+    const conjuntoArestas = arestas ?? [];
+    
+    this.vertices = vertices ?? [];
+    this.arestas = new Set(conjuntoArestas);
   }
 
   verticeValido(vertice: string): boolean {
