@@ -1,6 +1,12 @@
 import { describe, expect, jest, test } from '@jest/globals'
 import GrafoListaAdj from '../src/impl/GrafoListaAdj';
 
+let grafo;
+
+beforeEach(() => {
+  grafo = new GrafoListaAdj();
+})
+
 describe('Testa a criação de um grafo que utiliza lista de adjacencia', () => {
   test('Criando um grafo com o construtor vazio', () => {
     const grafoListaAdj = new GrafoListaAdj();
